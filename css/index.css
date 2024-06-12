@@ -1,0 +1,57 @@
+.landing {
+    height: 45%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bg-image {
+    background-image: url('.././img/pexels-anton-8100-4132538.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .landing-flex {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .btn-conhecer {
+    size: 2rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+
+  .card {
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card h2 {
+    color: #333;
+  }
+
+  .card p {
+    color: #666;
+  }
+
+  .card img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .bottom {
+    text-align: center;
+    margin-top: 50px;
+  }

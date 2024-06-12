@@ -1,0 +1,294 @@
+:root {
+  --foreground: #0dc142;
+  --foreextra : #d8e0e0;
+  --background: #EEF7F7;
+  --backextra : #EEF7F7;
+  --text      : #000000;
+  --error: #ce3957;
+}
+
+html {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  color: var(--foreground);
+}
+
+label {
+  width: 100%;
+}
+
+input::placeholder {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: lighter;
+}
+
+.page-title {
+  user-select: none;
+  font-size:x-large;
+  font-weight: bold;
+}
+
+.btn, .btn-outline {
+  font-family: "JetBrains Mono", monospace;
+  min-width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  font-weight: 800;
+  padding: 8px 20px;
+  font-size: 12px;
+  outline: none;
+}
+
+.btn-round, .btn-round-outline {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.btn:hover, .btn-outline:hover, .btn-round:hover, .btn-round-outline:hover {
+  cursor: pointer;
+}
+
+.btn, .btn-round {
+  border: none;
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.btn-outline, .btn-round-outline {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+}
+
+.title {
+  font-size: 52px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.05em;
+  margin-bottom: 10px;
+  max-width: 11em;
+  font-weight: 800;
+}
+
+.inp, .inp-short {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  font-weight: 800;
+  padding: 8px 20px;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: var(--foreextra);
+  color: var(--text);
+}
+
+.inp:focus, .inp-short:focus {
+  outline: none;
+  border: 1px solid var(--foreground);
+}
+
+.inp::placeholder, .inp-short::placeholder {
+  color: color-mix(in srgb, var(--text) 50%, transparent);
+}
+
+.inp-short {
+  width: 70px;
+  height: 25px;
+}
+
+.row {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+.row > * {
+  margin-right: 10px;
+}
+
+.error {
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 100%;
+  padding: 3px 10px;
+  width: min-content;
+  height: min-content;
+  display: none;
+  background-color: var(--error) !important;
+  color: var(--background) !important;
+}
+
+.centered-form {
+  padding: 20px;
+  background-color: var(--backextra);
+  border-radius: 10px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-form * + * {
+  margin-top: 10px;
+}
+
+.centered-form label + * {
+  margin-top: 5px;
+}
+
+.container, .row-container {
+  width: 100%;
+  height: calc(100% - 80px);
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.row-container {
+  display: flex;
+}
+
+.row-quarter {
+  width: 25%;
+}
+
+.logo {
+  color: var(--foreground);
+}
+
+.logo {
+  height: 50px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo-big {
+  height: 150px;
+}
+
+.logo-big:hover {
+  cursor: pointer;
+}
+
+.toolbar > a {
+  color: var(--text);
+}
+
+.tbl {
+  border-collapse: collapse;
+  width: 100%;
+  color: var(--text);
+}
+
+.tbl-head > tr {
+  border-bottom: 1px solid var(--foreground);
+}
+
+.tbl-body tr + tr {
+  border-top: 1px solid var(--foreground);
+}
+
+th {
+  color: var(--foreground);
+}
+
+th:first-child {
+  text-align: left;
+}
+
+td {
+  text-align: center;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+
+tr {
+  height: 30px;
+}
+
+select {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  font-weight: 800;
+  padding: 8px 20px;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: var(--foreextra);
+  color: var(--text);
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid var(--foreground);
+}
+
+textarea {
+  font-family: "JetBrains Mono", monospace;
+  border: none;
+  font-weight: 800;
+  padding: 8px 20px;
+  width: 250px;
+  height: 120px;
+  border-radius: 3px;
+  background-color: var(--foreextra);
+  color: var(--text);
+  resize: none;
+}
+
+input[type="date"] {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--foreextra);
+  color: var(--text);
+  border: none;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--foreground);
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border: 1px solid var(--foreground);
+}
+
+input {
+  color-scheme: dark;
+}
+
+button:hover {
+  cursor: pointer;
+}
