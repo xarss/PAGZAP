@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PagZap</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/index.css" />
+
+  <script type="text/javascript" src="scripts/main.js" defer></script>
+  <script type="text/javascript" src="scripts/landingPage.js" defer></script>
+  <script type="text/javascript" src="scripts/theme.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+ 
+</head>
+
+<body>
+  <!--Toolbar-->
+  <div class="toolbar">
+    <div class="logo" onclick="location.href = 'index.html'"></div>
+
+    <span class="spacer"></span>
+
+    <a href="userSettings.html" id="username_display"></a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="">Home</a>
+    <button type="button" name="themeButton" class="btn-round material-symbols-outlined" onclick="switchTheme()">
+      dark_mode
+    </button>
+  </div>
+  <div class="landing bg-image">
+    <div class="landing-flex">
+      <h2 style="color: white;">
+        Pague rapidamente com PagZap
+      </h2>
+      <button class="btn btn-conhecer">
+        Conhecer
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <img src="./img/pexels-pixabay-38568.jpg" alt="Imagem 1">
+      <h2>1. Realize seu login</h2>
+      <p>Acesse o dashboard do PagZap e entre com a sua conta do Google</p>
+    </div>
+    <div class="card">
+      <img src="./img/pexels-shvetsa-4482900.jpg">
+      <h2>2. Registre uma conta</h2>
+      <p>Registre sua conta com valor, data de vencimento e também seu nome, email e celular</p>
+    </div>
+    <div class="card">
+      <img src="./img/pexels-cottonbro-5077054.jpg">
+      <h2>3. Receba alertas de pagamentos no seu WhatsApp</h2>
+      <p>Receba alertas no WhatsApp</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <h2>Pronto para iniciar</h2>
+    <p>Cadastre-se hoje e comece a receber alertas de pagamentos no WhatsApp</p>
+    <button class="btn btn-conhecer">Cadastrar</button>
+
+  </div>
+</body>
+
+</html>

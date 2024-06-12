@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PagZap</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script type="text/javascript" src="scripts/main.js" defer></script>
+    <script type="text/javascript" src="scripts/theme.js" defer></script>
+    <script type="text/javascript" src="scripts/dashboard.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <!--Toolbar-->
+    <div class="toolbar">
+      <div class="logo" onclick="location.href = 'index.html'"></div>
+      <div class="page-title">Dashboard</div>
+
+      <span class="spacer"></span>
+
+      <a href="userSettings.html" id="username_display"></a>
+      <a href="index.html">Home</a>
+      <button
+        name="themeButton"
+        class="btn-round material-symbols-outlined"
+        onclick="switchTheme()"
+      >
+        dark_mode
+      </button>
+      <button class="btn" onclick="logoff()">Logoff</button>
+    </div>
+    <!--End Toolbar-->
+    <div class="container">
+      <div id="payments_container">
+        Você não possui nenhuma conta.
+        <button onclick="openNewPaymentForm()" class="btn"> Adicionar Conta </button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<div id="overlay" class="overlay">
+  <div class="centered-form">
+      <h2 id="overlay_header">Adicionar Conta</h2>
+      <form>
+          <label>Nome da conta</label>
+          <input class="inp" type="text" id="payment_name" placeholder="Conta de energia" autocomplete="off">
+          
+          <label >Valor da conta</label>
+          <input class="inp" type="text" id="payment_value" placeholder="R$0,00" autocomplete="off">
+
+          <label >Referencia</label>
+          <textarea id="payment_reference" placeholder="Link do boleto: ..."></textarea>
+          
+          <label >Recorrencia</label>
+          <select id="payment_type">
+            <option value="single">Unica vez</option>
+            <option value="weekly">Semanal</option>
+            <option value="monthly">Mensal</option>
+          </select>
+
+          <div id="occurences_container" style="display: none;">
+            <label> Repetições </label>
+            <div>
+              <input type="checkbox" id="always_checkbox" checked>
+              <label> Para Sempre </label>
+              <div id="quantity_container" style="display: none;">
+                <label style="font-size:medium; text-align:center;"> N. de Vezes</label>
+                <input class="inp-short" type="text" value="0" id="payment_occurences" style="margin: 0;">
+              </div>
+            </div>
+          </div>
+
+          <label>Validade</label>
+          <input type="date" id="payment_due">
+
+          <button id="overlay_button" class="btn" type="button" onclick="registerNewPayment()">Adicionar</button>
+      </form>
+  </div>
+</div>
