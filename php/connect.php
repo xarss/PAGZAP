@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "192.168.0.16";
 $username = "root";
 $password = ""; 
 $database = 'pagzap';
